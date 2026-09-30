@@ -1,28 +1,40 @@
-title = "ПОДЗЕМЕЛЬЕ: СОЛЯНЫЕ ШАХТЫ"
-frame = "=" * 31
-
-print(frame)
-print(f"   {title}   ")
-print(frame)
-print()
-
+print("ПОДЗЕМЕЛЬЕ: ТИХИЙ КОЛОДЕЦ")
 print("Как зовут героя?")
-hero_name = input()
-print(f"Добро пожаловать, {hero_name}!")
-print("Ты входишь в соляные шахты. Вокруг белые стены, темнота и ощущается запах соли.")
-print()
+name = input()
+print(f"Добро пожаловать, {name}!")
+print("Ты входишь в подземелье. Здесь темно и пахнет сыростью.")
+print("Настройка героя.")
+print("Здоровье, сила, ловкость, выносливость по одному числу в строке:")
+health = int(input())
+strength = int(input())
+agility = int(input())
+endurance = int(input())
 
+base_attack = 10
+damage = base_attack + strength * 1.5
+crit_damage = damage * 2
+stamina = (health + endurance) // 10
+
+print("Характеристики героя:")
+print(f"Здоровье:     {health}")
+print(f"Сила:         {strength}")
+print(f"Ловкость:     {agility}")
+print(f"Выносливость: {endurance}")
+print()
+print(f"Урон героя:       {damage:.1f}")
+print(f"Критический урон: {crit_damage:.1f}")
+print(f"Запас сил:        {stamina}")
+print()
 print("Что делаешь?")
-print("1 - осмотреться")
-print("2 - идти вперёд")
-print("3 - отдохнуть")
-print("4 - постучать по стене")
-print("5 - зажечь факел")
-print()
-
-choice = input()
-
-print()
-print(frame)
-print(f"Удачи в путешествии, {hero_name}!")
-print(frame)
+print("1")
+print("осмотреться")
+print("2")
+print("идти вперёд")
+print("3")
+print("отдохнуть")
+print("4")
+print("прислушаться")
+print("5")
+print("зажечь факел")
+action = input()
+print(f"Удачи, {name}!")
